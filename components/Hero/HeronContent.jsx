@@ -1,0 +1,104 @@
+import React from "react";
+import Image from "next/image";
+import WCbackground from "../../asset/heroBackground.jpg";
+import HeroRightImg from "../../asset/HeroRight.png";
+import Box from "@mui/material/Box";
+import CustomButton from "../CustomButton";
+import { Typography } from "@mui/material";
+import { Container } from "@mui/material";
+function HeronContent() {
+  return (
+    <Box
+      sx={{
+        width: "100%",
+        height: "540px",
+        paddingTop: "20px",
+        paddingBottom: "20px",
+        position: "relative",
+      }}
+    >
+      <Container sx={{ display: "flex", alignItems: "center" }}>
+        <div
+          style={{
+            position: "absolute",
+            zIndex: -1,
+          }}
+        >
+          <Image
+            src={WCbackground}
+            alt="WC"
+            width="1131px"
+            height="500px"
+            quality={100}
+          />
+        </div>
+        <Box
+          sx={{
+            width: "50%",
+            height: "100%",
+            zIndex: 9,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: " center",
+          }}
+        >
+          <Typography
+            sx={{
+              fontSize: "21px",
+              textAlign: "center",
+              marginTop: "20px",
+            }}
+          >
+            Welcome to Webcodies
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "59px",
+              color: "primary.dark",
+              lineHeight: "0.9",
+              textAlign: "center",
+              marginTop: "8px",
+              fontWeight: 700,
+              letterSpacing: "1px",
+            }}
+          >
+            Grow your <br />
+            Business with us.
+          </Typography>
+          <Typography
+            sx={{
+              fontSize: "17px",
+              textAlign: "center",
+              marginTop: "12px",
+            }}
+          >
+            We provides always our best services for you
+          </Typography>
+          <Box sx={{ marginTop: "20px", marginBottom: "20px" }}>
+            <CustomButton title="ALL  PROJECTS" />
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            width: "50%",
+            height: "100%",
+            zIndex: 9,
+            display: "flex",
+            flexDirection: "column",
+            alignItems: " center",
+            objectFit: "cover",
+          }}
+        >
+          <Image
+            src={HeroRightImg}
+            alt="WC"
+            width="741px"
+            height="703px"
+            quality={100}
+          />
+        </Box>
+      </Container>
+    </Box>
+  );
+}
+export default HeronContent;
