@@ -86,6 +86,8 @@ const WorkTogather = () => {
           >
             {mock.map((item, i) => (
               <Card
+
+                key={index}
                 sx={{ padding: "23px", display: "flex", flexDirection: "row" }}
               >
                 <Box
@@ -138,7 +140,9 @@ const WorkTogather = () => {
             lineHeight: 1,
           }}
         >
-          Let's Work Together
+
+          {`Let's Work Together`}
+
         </Typography>
       </Box>
     );
