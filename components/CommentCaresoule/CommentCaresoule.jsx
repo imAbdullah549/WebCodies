@@ -70,7 +70,7 @@ function CommentCaresoule() {
       <Box sx={{ marginBottom: "10px" }}>
         <Heading />
       </Box>
-      <Carousel>
+      <Carousel showThumbs={false}>
         <Box>
           <Box
             sx={{
@@ -180,13 +180,11 @@ function CommentCaresoule() {
                     color: "rgb(48, 48, 48)",
                   }}
                 >
-
                   {`                  Ash's tactics & books have helped me a lot in my understanding
                   on how social media advertising works.I can say that he is one
                   of the best development professionals i have dealt with so
                   far. His experience is great & he is such a great & pleasant
                   person to work with as he understands what you are`}
-
                 </Typography>
               </Box>
             </Box>

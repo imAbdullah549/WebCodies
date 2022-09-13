@@ -46,7 +46,7 @@ function aboutUsCommentCaresoule() {
       sx={{ marginTop: "20px", display: "flex", justifyContent: "center" }}
     >
       <Box sx={{ width: "950px" }}>
-        <Carousel>
+        <Carousel showThumbs={false}>
           <Box
             sx={{
               paddingTop: "40px",
@@ -137,13 +137,11 @@ function aboutUsCommentCaresoule() {
                     color: "rgb(48, 48, 48)",
                   }}
                 >
-
                   {`Ash's tactics & books have helped me a lot in my understanding
                   on how social media advertising works.I can say that he is one
                   of the best development professionals i have dealt with so
                   far. His experience is great & he is such a great & pleasant
                   person to work with as he understands what you are`}
-
                 </Typography>
               </Box>
             </Box>

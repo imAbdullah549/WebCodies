@@ -70,10 +70,10 @@ function ImprovingLevel() {
               fontFamily: "Open Sans",
             }}
           >
-            Mauris porta risus metus, vitae sollicitudin augue eleifend at.
+            {`Mauris porta risus metus, vitae sollicitudin augue eleifend at.
             Nullam nec ex nec velit cursus varius. Mauris a dolor massa. Nam
             dolor purus, consequat luctus tellus in, luctus fermentum libero.
-            Class aptent taciti sociosqu turpis in mauris porttitor lacinia.
+            Class aptent taciti sociosqu turpis in mauris porttitor lacinia.`}
           </Typography>
           <Box
             sx={{
