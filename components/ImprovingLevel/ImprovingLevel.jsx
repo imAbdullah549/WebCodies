@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Container, Button, Typography } from "@mui/material";
-import ImprovingLevelImg from "../../asset/aboutus/ImprovingLevel.jpg";
+import ImprovingLevelImg from "../../asset/aboutus/improvingLevel.jpg";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import LinearProgress, {

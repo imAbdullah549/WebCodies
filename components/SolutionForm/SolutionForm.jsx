@@ -4,7 +4,7 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { Form } from "./components";
 import { Container, Box, Typography, Grid } from "@mui/material";
 import Image from "next/image";
-import LaptopImg from "../../asset/Laptop.png";
+import LaptopImg from "../../asset/laptop.png";
 
 const SolutionForm = () => {
   const theme = useTheme();
