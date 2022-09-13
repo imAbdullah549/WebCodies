@@ -35,7 +35,7 @@ function AboutUS() {
               zIndex: 9,
               display: "flex",
               flexDirection: "column",
-              alignItems: " center",
+              alignItems: "center",
             }}
           >
             <Box>
@@ -91,10 +91,10 @@ function AboutUS() {
                 color: "white",
               }}
             >
-              At WebCodies, our expertise in the advanced cutting-edge code
+              {`              At WebCodies, our expertise in the advanced cutting-edge code
               technologies, our team's collaborative workflow, and efficiency
               model provides exceptional business solutions in graphics design,
-              animations, software development, and mobile applications.
+              animations, software development, and mobile applications.`}
             </Typography>
           </Box>
         </Box>
