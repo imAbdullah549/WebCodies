@@ -86,6 +86,7 @@ function OurTraditions() {
         <Grid container sx={{ maxWidth: "1100px" }}>
           {TraditionCardsData.map((item, index) => {
             return (
+
               <Grid item xs={4} key={index}>
                 <TraditionCards
                   icon={item.icon}
