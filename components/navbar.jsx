@@ -32,9 +32,16 @@ function Navbar(props) {
 
   const drawer = (
     <Box onClick={handleDrawerToggle} sx={{ textAlign: "center" }}>
-      <Typography variant="h6" sx={{ my: 2 }}>
-        MUI
-      </Typography>
+      <Button
+        href={"/"}
+        sx={{
+          color: "#000000",
+          marginRight: "40px",
+          marginLeft: "40px",
+        }}
+      >
+        <Image src={Logo} alt="WC" width="67px" height="40px" quality={100} />
+      </Button>
       <Divider />
       <List>
         {navItems.map((item) => (
@@ -71,6 +78,7 @@ function Navbar(props) {
               color: "#000000",
               marginRight: "40px",
               marginLeft: "40px",
+              display: { xs: "none", sm: "block" },
             }}
           >
             <Image

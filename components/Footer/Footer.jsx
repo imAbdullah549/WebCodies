@@ -13,21 +13,15 @@ const Footer = () => {
   const theme = useTheme();
   const { mode } = theme.palette;
 
-  const location = {
-    address: "1600 Amphitheatre Parkway, Mountain View, californi.",
-    lat: 37.42216,
-    lng: -122.08427,
-  }; // our location object from earlier
-
   const Aboutus = () => {
     return (
       <Box
         height={"100%"}
-        justifyContent={" space-between"}
-        marginTop={1}
+        justifyContent={"space-between"}
         marginRight={2}
         display={"flex"}
         flexDirection={"column"}
+        sx={{ marginTop: { xs: 3, sm: 1 } }}
       >
         <Link
           underline="none"
@@ -43,7 +37,7 @@ const Footer = () => {
               textAlign: "center",
               lineHeight: 1.33,
               textAlign: "left",
-              fontWeight: "bold",
+              fontWeight: { xs: 500, sm: "bold" },
             }}
           >
             ABOUT US
@@ -55,9 +49,9 @@ const Footer = () => {
             fontSize: "13px",
             fontFamily: "Open Sans",
             color: "rgba(255, 255, 255, 0.6)",
-            lineHeight: 1.692,
+            lineHeight: { sx: 1.1, sm: 1.692 },
             width: "260px",
-            height: "80px",
+            height: { sx: "100%", sm: "80px" },
           }}
         >
           Many businesses, large and small, have a huge source of great ideas
@@ -65,37 +59,40 @@ const Footer = () => {
           these companies.
         </Typography>
         <Typography
-          color="white"
           sx={{
+            color: "rgba(255, 255, 255, 0.9)",
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.15,
             textAlign: "left",
-            fontWeight: "bold",
+            fontWeight: { xs: 400, sm: "bold" },
           }}
         >
           London, UK 441
         </Typography>
         <Typography
-          color="white"
           sx={{
+            color: "rgba(255, 255, 255, 0.9)",
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.15,
             textAlign: "left",
-            fontWeight: "bold",
+            fontWeight: { xs: 400, sm: "bold" },
           }}
         >
           Phone: +7 526 255 25 26
         </Typography>
         <Typography
-          color="white"
           sx={{
+            color: "rgba(255, 255, 255, 0.9)",
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.15,
             textAlign: "left",
-            fontWeight: "bold",
+            fontWeight: { xs: 400, sm: "bold" },
           }}
         >
           Email: info@example.com
@@ -109,10 +106,10 @@ const Footer = () => {
       <Box
         height={"100%"}
         justifyContent={" space-between"}
-        marginTop={1}
         marginRight={2}
         display={"flex"}
         flexDirection={"column"}
+        sx={{ marginTop: { xs: 3, sm: 1 } }}
       >
         <Typography
           color="white"
@@ -121,19 +118,20 @@ const Footer = () => {
             textAlign: "center",
             lineHeight: 1.33,
             textAlign: "left",
-            fontWeight: "bold",
+            fontWeight: { xs: 500, sm: "bold" },
           }}
         >
           All your needs
         </Typography>
 
         <Typography
-          color="white"
           sx={{
+            marginTop: { xs: "3px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.18,
             textAlign: "left",
+            color: "rgba(255, 255, 255, 0.9)",
           }}
         >
           Life at webcodies
@@ -141,43 +139,48 @@ const Footer = () => {
         <Typography
           color="white"
           sx={{
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.18,
             textAlign: "left",
+            color: "rgba(255, 255, 255, 0.9)",
           }}
         >
           Careers
         </Typography>
         <Typography
-          color="white"
           sx={{
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.18,
             textAlign: "left",
+            color: "rgba(255, 255, 255, 0.9)",
           }}
         >
           Portfolio
         </Typography>
         <Typography
-          color="white"
           sx={{
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.18,
             textAlign: "left",
+            color: "rgba(255, 255, 255, 0.9)",
           }}
         >
           Blog
         </Typography>
         <Typography
-          color="white"
           sx={{
+            marginTop: { xs: "5px", sm: "0px" },
             fontSize: "13px",
             textAlign: "center",
             lineHeight: 1.18,
             textAlign: "left",
+            color: "rgba(255, 255, 255, 0.9)",
           }}
         >
           Contact Us
@@ -190,10 +193,13 @@ const Footer = () => {
       <Box
         height={"100%"}
         justifyContent={" space-between"}
-        marginTop={1}
-        marginRight={2}
         display={"flex"}
         flexDirection={"column"}
+        sx={{
+          marginTop: { xs: 3, sm: 1 },
+          marginRight: { xs: 0, sm: 2 },
+          width: { xs: "100%", sm: "auto" },
+        }}
       >
         <Typography
           color="white"
@@ -202,12 +208,39 @@ const Footer = () => {
             textAlign: "center",
             lineHeight: 1.33,
             textAlign: "left",
-            fontWeight: "bold",
+            fontWeight: { xs: 500, sm: "bold" },
           }}
         >
           Our Locations
         </Typography>
-        <MapSection location={location} zoomLevel={17} />
+
+        <Box
+          sx={{
+            marginTop: { xs: 3, sm: 1 },
+            overflow: "hidden",
+            left: "0%",
+            width: "100%",
+            height: "100%",
+          }}
+        >
+          <iframe
+            width="100%"
+            height="100%"
+            frameBorder="0"
+            title="map"
+            marginHeight={0}
+            marginWidth={0}
+            scrolling="no"
+            src="https://maps.google.com/maps?width=100%&height=100%&hl=en&q=Milan&ie=UTF8&t=&z=14&iwloc=B&output=embed"
+            style={{
+              minHeight: 300,
+              filter:
+                theme.palette.mode === "dark"
+                  ? "grayscale(0.5) opacity(0.7)"
+                  : "none",
+            }}
+          />
+        </Box>
       </Box>
     );
   };
@@ -215,8 +248,8 @@ const Footer = () => {
     <Box
       sx={{
         background: "rgb(25, 25, 25)",
-        paddingTop: "60px",
-        paddingBottom: "60px",
+        paddingTop: { xs: "40px", sm: "60px" },
+        paddingBottom: { xs: "40px", sm: "60px" },
       }}
     >
       <Container>
@@ -246,9 +279,11 @@ const Footer = () => {
             display="flex"
             flexWrap={"wrap"}
             alignItems={"center"}
-            height={"230px"}
             width={"100%"}
-            justifyContent={"space-evenly"}
+            sx={{
+              height: { xs: "100%", sm: "230px" },
+              justifyContent: { xs: "flex-start", sm: "space-evenly" },
+            }}
           >
             <Aboutus />
             <AllYouNeed />

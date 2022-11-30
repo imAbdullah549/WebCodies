@@ -7,15 +7,28 @@ import GoogleIcon from "@mui/icons-material/Google";
 
 function BottomBar() {
   return (
-    <Box sx={{ backgroundColor: "primary.dark", width: "100%" }}>
+    <Box
+      sx={{
+        backgroundColor: "primary.dark",
+        width: "100%",
+      }}
+    >
       <Container
         sx={{
           display: "flex",
           alignItems: "center",
           justifyContent: "space-between",
+          flexDirection: { xs: "column", sm: "row" },
         }}
       >
-        <Box display={"flex"} paddingTop={"3px"} paddingBottom={"3px"}>
+        <Box
+          display={"flex"}
+          sx={{
+            paddingTop: { xs: "8px", sm: "3px" },
+            paddingBottom: { xs: "8px", sm: "3px" },
+            columnGap: { xs: "10px", sm: "0px" },
+          }}
+        >
           <Button
             variant="contained"
             style={{ borderRadius: 3, background: "#3250bf" }}
@@ -61,7 +74,7 @@ function BottomBar() {
             />
           </Button>
         </Box>
-        <Box>
+        <Box sx={{ marginBottom: { xs: "7px", sm: "0px" } }}>
           <Typography
             color="rgb(146, 146, 146)"
             sx={{

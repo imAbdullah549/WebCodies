@@ -19,14 +19,17 @@ const SolutionForm = () => {
           <Grid item xs={12} md={6}>
             <Form />
           </Grid>
+
           <Grid item container xs={12} md={6} alignItems={"center"}>
-            <Image
-              src={LaptopImg}
-              alt="WC"
-              width="886px"
-              height="793px"
-              quality={100}
-            />
+            <Box sx={{ display: { xs: "none", sm: "block" } }}>
+              <Image
+                src={LaptopImg}
+                alt="WC"
+                width="886px"
+                height="793px"
+                quality={100}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Box>

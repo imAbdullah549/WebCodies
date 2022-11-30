@@ -14,34 +14,8 @@ import AvatarComments from "../../asset/cauresolImg/AvatarComments.jpg";
 import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from "react-responsive-carousel";
+import Heading from "../Heading";
 function CommentCaresoule() {
-  const Heading = () => {
-    return (
-      <Box sx={{ marginTop: "50px" }}>
-        <Typography
-          sx={{
-            fontSize: "15px",
-            textAlign: "center",
-            lineHeight: 2.5,
-          }}
-        >
-          Quickly unleash cross
-        </Typography>
-        <Typography
-          sx={{
-            color: "primary.dark",
-            fontSize: "35px",
-            textAlign: "center",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            lineHeight: 1,
-          }}
-        >
-          Our Projects
-        </Typography>
-      </Box>
-    );
-  };
   const data = [
     {
       logo: project1Img3Logo,
@@ -67,6 +41,7 @@ function CommentCaresoule() {
 
   return (
     <Container sx={{ marginTop: "20px" }}>
+      <Heading subtitle="Quickly unleash cross" title="Our Projects" />
       <Box sx={{ marginBottom: "10px" }}>
         <Heading />
       </Box>

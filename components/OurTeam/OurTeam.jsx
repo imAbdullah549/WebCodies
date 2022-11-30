@@ -7,39 +7,11 @@ import CardContent from "@mui/material/CardContent";
 import ListItemText from "@mui/material/ListItemText";
 import CardMedia from "@mui/material/CardMedia";
 import { Container } from "@mui/material";
+import Heading from "../Heading";
 const OurTeam = () => {
-  const Heading = () => {
-    return (
-      <Box sx={{ marginTop: "50px" }}>
-        <Typography
-          sx={{
-            fontSize: "15px",
-            textAlign: "center",
-            lineHeight: 2.5,
-          }}
-        >
-          Quickly unleash cross
-        </Typography>
-        <Typography
-          sx={{
-            color: "primary.dark",
-            fontSize: "35px",
-            textAlign: "center",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            lineHeight: 1,
-          }}
-        >
-          Meet Out Team
-        </Typography>
-      </Box>
-    );
-  };
   return (
     <Container>
-      <Box marginBottom={4}>
-        <Heading />
-      </Box>
+      <Heading subtitle="Quickly unleash cross" title="Meet Out Team" />
       <Grid container spacing={2}>
         {[
           {

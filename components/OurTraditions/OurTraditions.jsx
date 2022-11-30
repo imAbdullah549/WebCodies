@@ -7,6 +7,7 @@ import LightbulbIcon from "@mui/icons-material/Lightbulb";
 import ImportantDevicesIcon from "@mui/icons-material/ImportantDevices";
 import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 import DetailsIcon from "@mui/icons-material/Details";
+import Heading from "../Heading";
 const TraditionCardsData = [
   {
     icon: (
@@ -57,37 +58,17 @@ const TraditionCardsData = [
 function OurTraditions() {
   return (
     <Container>
-      <Box sx={{ marginTop: "50px" }}>
-        <Typography
-          sx={{
-            fontSize: "15px",
-            textAlign: "center",
-            lineHeight: 2.5,
-          }}
-        >
-          Quickly unleash cross
-        </Typography>
-        <Typography
-          sx={{
-            color: "primary.dark",
-            fontSize: "35px",
-            textAlign: "center",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            lineHeight: 1,
-          }}
-        >
-          Our Traditions
-        </Typography>
-      </Box>
+      <Heading subtitle={"Quickly unleash cross"} title={"Our Traditions"} />
       <Box
-        sx={{ display: "flex", justifyContent: "center", paddingTop: "15px" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
         <Grid container sx={{ maxWidth: "1100px" }}>
           {TraditionCardsData.map((item, index) => {
             return (
-
-              <Grid item xs={4} key={index}>
+              <Grid item xs={12} sm={4} key={index}>
                 <TraditionCards
                   icon={item.icon}
                   heading={item.heading}

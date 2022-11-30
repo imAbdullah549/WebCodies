@@ -16,10 +16,15 @@ function ViewService() {
   return (
     <Container>
       <Box
-        sx={{ display: "flex", justifyContent: "center", paddingTop: "15px" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "15px",
+          marginTop: { xs: "20px", sm: "0px" },
+        }}
       >
-        <Grid container sx={{ maxWidth: "950px" }}>
-          <Grid item xs={4}>
+        <Grid container sx={{ maxWidth: "950px" }} spacing={{ xs: 2, sm: 0 }}>
+          <Grid item xs={12} sm={4}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia>
                 <Image
@@ -50,7 +55,7 @@ function ViewService() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia style={{ backgroundColor: "#3250bf" }}>
                 <Image
@@ -82,7 +87,7 @@ function ViewService() {
               </CardContent>
             </Card>
           </Grid>
-          <Grid item xs={4}>
+          <Grid item xs={12} sm={4}>
             <Card sx={{ maxWidth: 345 }}>
               <CardMedia>
                 <Image
