@@ -2,8 +2,12 @@ import React from "react";
 import { Container, Typography, Box } from "@mui/material";
 import Image from "next/image";
 import AboutUsImg from "../../asset/AboutUsImg.jpg";
-
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 function AboutUS() {
+  const theme = useTheme();
+  const isXs = useMediaQuery("(max-width:600px)");
+
   return (
     <Container>
       <Box
@@ -23,14 +27,22 @@ function AboutUS() {
             src={AboutUsImg}
             alt="WC"
             width="1145px"
-            height="380px"
+            height={isXs ? "1380px" : "380px"}
             quality={100}
+            objectFit="cover"
           />
         </div>
-        <Box sx={{ display: "flex", alignItems: "center", paddingTop: "70px" }}>
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            paddingTop: { xs: "30px", sm: "70px" },
+            flexDirection: { xs: "column", sm: "row" },
+          }}
+        >
           <Box
             sx={{
-              width: "50%",
+              width: { xs: "80%", sm: "50%" },
               height: "100%",
               zIndex: 9,
               display: "flex",
@@ -42,18 +54,18 @@ function AboutUS() {
               <Typography
                 color="secondary"
                 sx={{
-                  fontSize: "20px",
+                  fontSize: { xs: "17px", sm: "20px" },
                   textAlign: "center",
                   lineHeight: 1.28,
                   textAlign: "left",
-                  fontWeight: 700,
+                  fontWeight: { xs: 500, sm: 700 },
                 }}
               >
                 ABOUT US
               </Typography>
               <Typography
                 sx={{
-                  fontSize: "25px",
+                  fontSize: { xs: "21px", sm: "25px" },
                   textAlign: "center",
                   lineHeight: 1.28,
                   textAlign: "left",
@@ -72,12 +84,13 @@ function AboutUS() {
           </Box>
           <Box
             sx={{
-              width: "50%",
+              width: { xs: "90%", sm: "50%" },
               height: "100%",
               zIndex: 9,
               display: "flex",
               flexDirection: "column",
               alignItems: " center",
+              paddingTop: { xs: "30px", sm: "0px" },
             }}
           >
             <Typography
@@ -88,10 +101,10 @@ function AboutUS() {
                 lineHeight: 1.28,
                 textAlign: "left",
                 fontWeight: 300,
-                color: "white",
+                color: { xs: "gray", sm: "white" },
               }}
             >
-              {`              At WebCodies, our expertise in the advanced cutting-edge code
+              {`At WebCodies, our expertise in the advanced cutting-edge code
               technologies, our team's collaborative workflow, and efficiency
               model provides exceptional business solutions in graphics design,
               animations, software development, and mobile applications.`}

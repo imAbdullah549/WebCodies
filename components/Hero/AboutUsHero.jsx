@@ -11,13 +11,19 @@ function AboutUsHero() {
     <Box
       sx={{
         width: "100%",
-        height: "540px",
+        height: { xs: "auto", sm: "540px" },
         paddingTop: "20px",
         paddingBottom: "20px",
         position: "relative",
       }}
     >
-      <Container sx={{ display: "flex", alignItems: "center" }}>
+      <Container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" },
+        }}
+      >
         <div
           style={{
             position: "absolute",
@@ -34,7 +40,7 @@ function AboutUsHero() {
         </div>
         <Box
           sx={{
-            width: "50%",
+            width: { xs: "100%", sm: "50%" },
             height: "100%",
             zIndex: 9,
             display: "flex",
@@ -44,11 +50,11 @@ function AboutUsHero() {
         >
           <Typography
             sx={{
-              fontSize: "52px",
+              fontSize: { xs: "38px", sm: "56px" },
               color: "primary.dark",
               lineHeight: "1.2",
               textAlign: "center",
-              marginTop: "8px",
+              marginTop: { xs: "0px", sm: "8px" },
               fontWeight: 700,
               letterSpacing: "1px",
             }}
@@ -78,6 +84,7 @@ function AboutUsHero() {
             flexDirection: "column",
             alignItems: " center",
             objectFit: "cover",
+            display: { xs: "none", sm: "block" },
           }}
         >
           <Image

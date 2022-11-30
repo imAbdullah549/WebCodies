@@ -43,14 +43,19 @@ function aboutUsCommentCaresoule() {
 
   return (
     <Container
-      sx={{ marginTop: "20px", display: "flex", justifyContent: "center" }}
+      sx={{
+        marginTop: { xs: "0px", sm: "20px" },
+        marginBottom: { xs: "20px", sm: "0px" },
+        display: "flex",
+        justifyContent: "center",
+      }}
     >
-      <Box sx={{ width: "950px" }}>
+      <Box sx={{ width: { xs: "100%", sm: "950px" } }}>
         <Carousel showThumbs={false}>
           <Box
             sx={{
-              paddingTop: "40px",
-              paddingBottom: "40px",
+              paddingTop: { xs: "25px", sm: "40px" },
+              paddingBottom: { xs: "25px", sm: "40px" },
               marginTop: "10px",
               display: "flex",
               flexDirection: " row",
@@ -59,7 +64,7 @@ function aboutUsCommentCaresoule() {
               backgroundColor: "rgb(248, 248, 248)",
             }}
           >
-            <div style={{}}>
+            <Box>
               <Image
                 src={lineCaresol}
                 alt="WC"
@@ -67,7 +72,7 @@ function aboutUsCommentCaresoule() {
                 height="150px"
                 quality={100}
               />
-            </div>
+            </Box>
             <div
               style={{
                 position: "absolute",
@@ -84,7 +89,7 @@ function aboutUsCommentCaresoule() {
             <Box
               sx={{
                 width: "620px",
-                height: "220px",
+                height: { xs: "100%", sm: "220px" },
                 display: "flex",
                 alignItems: "center",
                 flexDirection: "column",
@@ -106,9 +111,9 @@ function aboutUsCommentCaresoule() {
                   <Typography
                     sx={{
                       marginTop: "10px",
-                      fontSize: "18px",
+                      fontSize: { xs: "16px", sm: "18px" },
                       textAlign: "center",
-                      fontWeight: "bold",
+                      fontWeight: { xs: 600, sm: "bold" },
                       lineHeight: 1,
                       color: "rgb(48, 48, 48)",
                     }}
@@ -121,6 +126,7 @@ function aboutUsCommentCaresoule() {
                       textAlign: "center",
                       lineHeight: 1,
                       color: "rgb(196, 196, 196)",
+                      marginTop: { xs: "1px", sm: "0px" },
                     }}
                   >
                     Peerio Technologies
@@ -131,7 +137,7 @@ function aboutUsCommentCaresoule() {
                 <Typography
                   sx={{
                     marginTop: "15px",
-                    fontSize: "17px",
+                    fontSize: { xs: "15px", sm: "17px" },
                     textAlign: "center",
                     lineHeight: 1,
                     color: "rgb(48, 48, 48)",

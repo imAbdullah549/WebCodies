@@ -14,6 +14,7 @@ import ListItemAvatar from "@mui/material/ListItemAvatar";
 import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
 import PhoneIcon from "@mui/icons-material/Phone";
+import Heading from "../Heading";
 const WorkTogather = () => {
   const theme = useTheme();
   const mock = [
@@ -87,7 +88,11 @@ const WorkTogather = () => {
             {mock.map((item, i) => (
               <Card
                 key={i}
-                sx={{ padding: "23px", display: "flex", flexDirection: "row" }}
+                sx={{
+                  padding: { xs: "15px", sm: "23px" },
+                  display: "flex",
+                  flexDirection: "row",
+                }}
               >
                 <Box
                   marginRight={2}
@@ -117,44 +122,18 @@ const WorkTogather = () => {
     );
   };
 
-  const Heading = () => {
-    return (
-      <Box sx={{ marginTop: "50px" }}>
-        <Typography
-          sx={{
-            fontSize: "15px",
-            textAlign: "center",
-            lineHeight: 2.5,
-          }}
-        >
-          New stunning projects for our amazing clients.
-        </Typography>
-        <Typography
-          sx={{
-            color: "primary.dark",
-            fontSize: "35px",
-            textAlign: "center",
-            fontWeight: "bold",
-            textTransform: "uppercase",
-            lineHeight: 1,
-          }}
-        >
-
-          {`Let's Work Together`}
-        </Typography>
-      </Box>
-    );
-  };
   return (
     <Container sx={{ marginBottom: "90px" }}>
-      <Box marginBottom={4}>
-        <Heading />
+      <Box>
+        <Heading
+          subtitle="New stunning projects for our amazing clients."
+          title="Let's Work Together"
+        />
       </Box>
       <Box position={"relative"} bgcolor={"alternate.main"}>
         <Container>
           <Contact />
         </Container>
-        <Box></Box>
       </Box>
     </Container>
   );

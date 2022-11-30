@@ -80,7 +80,7 @@ const Form = () => {
           <Grid item xs={12}>
             <Typography
               sx={{
-                fontSize: "14px",
+                fontSize: { xs: "13", sm: "14px" },
                 color: "rgb(215, 215, 215)",
               }}
             >
@@ -90,7 +90,7 @@ const Form = () => {
           <Grid item xs={12}>
             <Typography
               sx={{
-                fontSize: "33px",
+                fontSize: { xs: "22px", sm: "33px" },
                 color: "rgb(215, 215, 215)",
                 lineHeight: 1.2,
               }}
@@ -101,7 +101,7 @@ const Form = () => {
           <Grid item xs={12}>
             <Typography
               sx={{
-                fontSize: "21px",
+                fontSize: { xs: "17px", sm: "21px" },
                 color: " rgb(185, 185, 185)",
                 lineHeight: 1.2,
                 fontFamily: "Open Sans",

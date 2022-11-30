@@ -54,12 +54,19 @@ const ContactForm = () => {
     });
 
     return (
-      <Box>
+      <Box sx={{ marginTop: { xs: "20px", sm: "0px" } }}>
         <Box marginBottom={4}>
-          <Typography variant={"h3"} sx={{ fontWeight: 700 }} gutterBottom>
+          <Typography
+            variant={"h3"}
+            sx={{ fontWeight: 700, fontSize: { xs: "30px", sm: "35px" } }}
+            gutterBottom
+          >
             Contact us
           </Typography>
-          <Typography color="text.secondary">
+          <Typography
+            color="text.secondary"
+            sx={{ fontSize: { xs: "16px", sm: "21px" } }}
+          >
             Rather than worrying about switching offices every couple years, you
             can instead stay in the same location and grow-up from your shared
             coworking space to an office that takes up an entire floor.
@@ -158,7 +165,10 @@ const ContactForm = () => {
                 </Button>
               </Grid>
               <Grid item xs={12}>
-                <Typography color="text.secondary">
+                <Typography
+                  color="text.secondary"
+                  sx={{ fontSize: { xs: "16px", sm: "21px" } }}
+                >
                   We'll get back to you in 1-2 business days.
                 </Typography>
               </Grid>
@@ -192,72 +202,70 @@ const ContactForm = () => {
   };
 
   return (
-    <Container>
-      <Box
-        sx={{
-          width: 1,
-          height: 1,
-          overflow: "hidden",
-        }}
-      >
-        <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
+    <Box
+      sx={{
+        width: 1,
+        height: 1,
+        overflow: "hidden",
+      }}
+    >
+      <Container paddingX={0} paddingY={0} maxWidth={{ sm: 1, md: 1236 }}>
+        <Box
+          display={"flex"}
+          flexDirection={{ xs: "column", md: "row" }}
+          position={"relative"}
+        >
           <Box
             display={"flex"}
-            flexDirection={{ xs: "column", md: "row" }}
-            position={"relative"}
+            alignItems={"center"}
+            width={1}
+            order={{ xs: 2, md: 1 }}
+          >
+            <Container>
+              <LeftSide />
+            </Container>
+          </Box>
+          <Box
+            sx={{
+              flex: { xs: "0 0 100%", md: "0 0 50%" },
+              position: "relative",
+              maxWidth: { xs: "100%", md: "50%" },
+              minHeight: { xs: 300, md: 600 },
+              order: { xs: 1, md: 2 },
+            }}
           >
             <Box
-              display={"flex"}
-              alignItems={"center"}
-              width={1}
-              order={{ xs: 2, md: 1 }}
-            >
-              <Container>
-                <LeftSide />
-              </Container>
-            </Box>
-            <Box
               sx={{
-                flex: { xs: "0 0 100%", md: "0 0 50%" },
+                width: { xs: 1, md: "50vw" },
+                height: "100%",
                 position: "relative",
-                maxWidth: { xs: "100%", md: "50%" },
-                minHeight: { xs: 300, md: 600 },
-                order: { xs: 1, md: 2 },
               }}
             >
               <Box
                 sx={{
-                  width: { xs: 1, md: "50vw" },
+                  width: "100%",
                   height: "100%",
-                  position: "relative",
+                  overflow: "hidden",
                 }}
               >
                 <Box
                   sx={{
-                    width: "100%",
-                    height: "100%",
                     overflow: "hidden",
+                    left: "0%",
+                    width: 1,
+                    height: 1,
+                    position: { xs: "relative", md: "absolute" },
                   }}
                 >
-                  <Box
-                    sx={{
-                      overflow: "hidden",
-                      left: "0%",
-                      width: 1,
-                      height: 1,
-                      position: { xs: "relative", md: "absolute" },
-                    }}
-                  >
-                    <RightSide />
-                  </Box>
+                  <RightSide />
                 </Box>
               </Box>
             </Box>
           </Box>
-        </Container>
-        <Divider />
-      </Box>
-    </Container>
+        </Box>
+      </Container>
+      <Divider />
+    </Box>
   );
 };
 
