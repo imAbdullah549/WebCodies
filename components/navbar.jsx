@@ -46,7 +46,7 @@ function Navbar(props) {
       <List>
         {navItems.map((item) => (
           <ListItem key={item.title} disablePadding>
-            <ListItemButton sx={{ textAlign: "center" }}>
+            <ListItemButton sx={{ textAlign: "center" }} href={item.link}>
               <ListItemText primary={item.title} />
             </ListItemButton>
           </ListItem>
@@ -98,10 +98,7 @@ function Navbar(props) {
                       key={index}
                       variant="h6"
                       component="div"
-                      // sx={{ display: { xs: "none", sm: "block" } }}
-                    >
-                      {"-"}
-                    </Typography>
+                    ></Typography>
                   ) : null}
 
                   <Button
