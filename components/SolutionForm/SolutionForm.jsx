@@ -14,7 +14,7 @@ const SolutionForm = () => {
 
   return (
     <Container>
-      <Box>
+      <Box sx={{ marginTop: "32px" }}>
         <Grid container>
           <Grid item xs={12} md={6}>
             <Form />

@@ -165,7 +165,7 @@ function OurExpertise() {
           justifyContent="space-between"
         >
           <RightContent />
-          {/* <Grid item xs={3}>
+          <Grid item xs={0} sm={3}>
             <Image
               src={mobile}
               alt="Mobile"
@@ -173,7 +173,7 @@ function OurExpertise() {
               height="907px"
               quality={100}
             />
-          </Grid> */}
+          </Grid>
         </Grid>
       </Container>
     </Box>

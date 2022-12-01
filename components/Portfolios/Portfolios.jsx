@@ -15,10 +15,10 @@ const Portfolios = () => {
           fontSize: "35px",
           fontWeight: "bold",
           lineHeight: 0.96,
+          maxWidth: "450px",
         }}
       >
-        It’s proudly for us to build
-        <br /> interior design
+        It’s proudly for us to build interior design
       </Typography>
       <Typography
         gutterBottom
@@ -26,11 +26,11 @@ const Portfolios = () => {
           fontSize: "15px",
           lineHeight: 1.3,
           color: "rgb(36, 36, 36)",
+          maxWidth: "530px",
         }}
       >
-        I produce elegant solutions with a human-centered design approach,
-        <br />
-        Feel free to get in touch with me via email.
+        I produce elegant solutions with a human-centered design approach, Feel
+        free to get in touch with me via email.
       </Typography>
       <Box sx={{ marginTop: "25px", marginBottom: "25px" }}>
         <Result />

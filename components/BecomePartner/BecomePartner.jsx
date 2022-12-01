@@ -25,15 +25,27 @@ function BecomePartner() {
       >
         <Box display={"flex"} flexDirection={"column"}>
           <Typography
+            sx={{
+              fontSize: { xs: "30px", sm: "51px" },
+              color: "rgb(50, 80, 191)",
+              lineHeight: "0.961",
+              fontWeight: { xs: 600, sm: 700 },
+<<<<<<< HEAD
+            }}
+          >
+            Become a Partner of
+          </Typography>
+          <Typography
             gutterBottom
             sx={{
               fontSize: { xs: "30px", sm: "51px" },
               color: "rgb(50, 80, 191)",
               lineHeight: "0.961",
               fontWeight: { xs: 600, sm: 700 },
+=======
+>>>>>>> main
             }}
           >
-            Become a Partner of <br />
             Our Company
           </Typography>
           <Typography
@@ -45,11 +57,28 @@ function BecomePartner() {
               color: "rgb(60, 60, 60)",
               lineHeight: 1.409,
               display: { xs: "none", sm: "block" },
+<<<<<<< HEAD
+              maxWidth: "445px",
+=======
+>>>>>>> main
             }}
           >
-            “A wonderful serenity has taken possession of my <br />
-            entire soul, like these sweet mornings ofings of <br />
-            spring which I enjocharm”
+            “A wonderful serenity has taken possession of my entire soul, like
+            these sweet mornings ofings of spring which I enjocharm”
+          </Typography>
+          <Typography
+            gutterBottom
+            sx={{
+              fontSize: { xs: "20px", sm: "22px" },
+              marginTop: "5px",
+              fontFamily: "OpenSans",
+              color: "rgb(60, 60, 60)",
+              lineHeight: 1.409,
+              display: { xs: "block", sm: "none" },
+            }}
+          >
+            “A wonderful serenity has taken possession of my entire soul, like
+            these sweet mornings ofings of spring which I enjocharm”
           </Typography>
           <Typography
             gutterBottom
