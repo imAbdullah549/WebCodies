@@ -30,7 +30,6 @@ function BecomePartner() {
               color: "rgb(50, 80, 191)",
               lineHeight: "0.961",
               fontWeight: { xs: 600, sm: 700 },
-<<<<<<< HEAD
             }}
           >
             Become a Partner of
@@ -42,8 +41,6 @@ function BecomePartner() {
               color: "rgb(50, 80, 191)",
               lineHeight: "0.961",
               fontWeight: { xs: 600, sm: 700 },
-=======
->>>>>>> main
             }}
           >
             Our Company
@@ -57,10 +54,7 @@ function BecomePartner() {
               color: "rgb(60, 60, 60)",
               lineHeight: 1.409,
               display: { xs: "none", sm: "block" },
-<<<<<<< HEAD
               maxWidth: "445px",
-=======
->>>>>>> main
             }}
           >
             “A wonderful serenity has taken possession of my entire soul, like
