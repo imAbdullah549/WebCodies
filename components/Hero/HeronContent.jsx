@@ -66,10 +66,10 @@ function HeronContent() {
               marginTop: "8px",
               fontWeight: 700,
               letterSpacing: "1px",
+              maxWidth: "525px",
             }}
           >
-            Grow your <br />
-            Business with us.
+            Grow your Business with us.
           </Typography>
           <Typography
             sx={{

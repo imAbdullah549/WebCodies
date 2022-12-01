@@ -77,10 +77,10 @@ function ImprovingLevel() {
               lineHeight: 1.2,
               fontWeight: "bold",
               fontFamily: "Poppins",
+              maxWidth: "445px",
             }}
           >
-            We’re constantly
-            <br /> improving any level
+            We’re constantly improving any level
           </Typography>
           <Typography
             gutterBottom

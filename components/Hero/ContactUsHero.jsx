@@ -57,11 +57,10 @@ function ContactUsHero() {
               marginTop: { xs: "0px", sm: "8px" },
               fontWeight: 700,
               letterSpacing: "1px",
+              maxWidth: "420px",
             }}
           >
-            Doing business
-            <br />
-            with us is easy.
+            Doing business with us is easy.
           </Typography>
           <Typography
             sx={{

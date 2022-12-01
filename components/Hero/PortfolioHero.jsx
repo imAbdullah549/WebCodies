@@ -51,11 +51,10 @@ function PortfolioHero() {
               marginTop: "8px",
               fontWeight: 700,
               letterSpacing: "1px",
+              maxWidth: "445px",
             }}
           >
-            We Think
-            <br />
-            Outside the box.
+            We Think Outside the box.
           </Typography>
           <Typography
             sx={{

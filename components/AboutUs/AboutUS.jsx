@@ -35,9 +35,10 @@ function AboutUS() {
         <Box
           sx={{
             display: "flex",
-            alignItems: "center",
-            paddingTop: { xs: "30px", sm: "70px" },
+            alignItems: { xs: "flex-start", sm: "center" },
+            paddingTop: { xs: "25px", sm: "70px" },
             flexDirection: { xs: "column", sm: "row" },
+            padding: { xs: "25px 25px 0px 25px", sm: "70px 0px 0px 0px" },
           }}
         >
           <Box
@@ -47,7 +48,7 @@ function AboutUS() {
               zIndex: 9,
               display: "flex",
               flexDirection: "column",
-              alignItems: "center",
+              alignItems: { xs: "start", sm: "center" },
             }}
           >
             <Box>
@@ -73,12 +74,42 @@ function AboutUS() {
                 }}
               >
                 We Are The Best
-                <br />
-                <span style={{ color: "#3250bf", letterSpacing: "1px" }}>
-                  Consulting Company
-                </span>
-                <br /> Bussiness And Innovation
-                <br /> Marketting
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "21px", sm: "25px" },
+                  textAlign: "center",
+                  lineHeight: 1.28,
+                  textAlign: "left",
+                  color: "#3250bf",
+                  letterSpacing: "1px",
+                }}
+              >
+                Consulting Company
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "21px", sm: "25px" },
+                  textAlign: "center",
+                  lineHeight: 1.28,
+                  textAlign: "left",
+                  color: "white",
+                  letterSpacing: "1px",
+                }}
+              >
+                Bussiness And Innovation
+              </Typography>
+              <Typography
+                sx={{
+                  fontSize: { xs: "21px", sm: "25px" },
+                  textAlign: "center",
+                  lineHeight: 1.28,
+                  textAlign: "left",
+                  color: "white",
+                  letterSpacing: "1px",
+                }}
+              >
+                Marketting
               </Typography>
             </Box>
           </Box>

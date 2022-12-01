@@ -57,10 +57,10 @@ function AboutUsHero() {
               marginTop: { xs: "0px", sm: "8px" },
               fontWeight: 700,
               letterSpacing: "1px",
+              maxWidth: "575px",
             }}
           >
-            Working together is <br />
-            success.
+            Working together is success.
           </Typography>
           <Typography
             sx={{
