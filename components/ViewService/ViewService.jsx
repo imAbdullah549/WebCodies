@@ -12,6 +12,7 @@ import ViewService3 from "../../asset/ViewService3.jpg";
 
 function ViewService() {
   return (
+<<<<<<< HEAD
     <Box
       sx={{
         paddingTop: "15px",
@@ -49,6 +50,112 @@ function ViewService() {
               </Typography>
             </CardContent>
           </Card>
+=======
+    <Container>
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          paddingTop: "15px",
+          marginTop: { xs: "20px", sm: "0px" },
+        }}
+      >
+        <Grid container sx={{ maxWidth: "950px" }} spacing={{ xs: 2, sm: 0 }}>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia>
+                <Image
+                  src={ViewService1}
+                  alt="WC"
+                  width="466px"
+                  height="311px"
+                  quality={100}
+                />
+              </CardMedia>
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  sx={{
+                    fontSize: "22px",
+                    textAlign: "left",
+                    lineHeight: 1.2,
+                    textAlign: "left",
+                    fontWeight: 700,
+                  }}
+                >
+                  Easy customization
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia style={{ backgroundColor: "#3250bf" }}>
+                <Image
+                  src={ViewService2}
+                  alt="WC"
+                  width="466px"
+                  height="311px"
+                  quality={100}
+                />
+              </CardMedia>
+              <CardContent style={{ backgroundColor: "#3250bf" }}>
+                <Typography
+                  gutterBottom
+                  sx={{
+                    color: "white",
+                    fontSize: "22px",
+                    textAlign: "left",
+                    lineHeight: 1.2,
+                    textAlign: "left",
+                    fontWeight: 700,
+                  }}
+                >
+                  Get the benefits
+                </Typography>
+                <Typography variant="body2" color="white">
+                  Eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+          <Grid item xs={12} sm={4}>
+            <Card sx={{ maxWidth: 345 }}>
+              <CardMedia>
+                <Image
+                  src={ViewService3}
+                  alt="WC"
+                  width="466px"
+                  height="311px"
+                  quality={100}
+                />
+              </CardMedia>
+              <CardContent>
+                <Typography
+                  gutterBottom
+                  sx={{
+                    fontSize: "22px",
+                    textAlign: "left",
+                    lineHeight: 1.2,
+                    textAlign: "left",
+                    fontWeight: 700,
+                  }}
+                >
+                  One click installation
+                </Typography>
+                <Typography variant="body2" color="text.secondary">
+                  Eaque ipsa quae ab illo inventore veritatis et quasi
+                  architecto beatae vitae dicta sunt explicabo.
+                </Typography>
+              </CardContent>
+            </Card>
+          </Grid>
+>>>>>>> main
         </Grid>
         <Grid item xs={9} sm={2.5}>
           <Card>

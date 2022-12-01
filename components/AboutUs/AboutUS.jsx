@@ -35,10 +35,16 @@ function AboutUS() {
         <Box
           sx={{
             display: "flex",
+<<<<<<< HEAD
             alignItems: { xs: "flex-start", sm: "center" },
             paddingTop: { xs: "25px", sm: "70px" },
             flexDirection: { xs: "column", sm: "row" },
             padding: { xs: "25px 25px 0px 25px", sm: "70px 0px 0px 0px" },
+=======
+            alignItems: "center",
+            paddingTop: { xs: "30px", sm: "70px" },
+            flexDirection: { xs: "column", sm: "row" },
+>>>>>>> main
           }}
         >
           <Box
