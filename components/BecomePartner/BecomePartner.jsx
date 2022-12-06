@@ -75,20 +75,6 @@ function BecomePartner() {
             these sweet mornings ofings of spring which I enjocharm”
           </Typography>
           <Typography
-            gutterBottom
-            sx={{
-              fontSize: { xs: "20px", sm: "22px" },
-              marginTop: "5px",
-              fontFamily: "OpenSans",
-              color: "rgb(60, 60, 60)",
-              lineHeight: 1.409,
-              display: { xs: "block", sm: "none" },
-            }}
-          >
-            “A wonderful serenity has taken possession of my entire soul, like
-            these sweet mornings ofings of spring which I enjocharm”
-          </Typography>
-          <Typography
             sx={{
               fontSize: "19px",
               fontFamily: "Poppins",

@@ -5,7 +5,6 @@ import AboutUsImg from "../../asset/AboutUsImg.jpg";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 function AboutUS() {
-  const theme = useTheme();
   const isXs = useMediaQuery("(max-width:600px)");
 
   return (
@@ -17,8 +16,8 @@ function AboutUS() {
           position: "relative",
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             position: "absolute",
             zIndex: -1,
           }}
@@ -27,11 +26,11 @@ function AboutUS() {
             src={AboutUsImg}
             alt="WC"
             width="1145px"
-            height={isXs ? "1380px" : "380px"}
+            height={isXs ? "1630px" : "380px"}
             quality={100}
             objectFit="cover"
           />
-        </div>
+        </Box>
         <Box
           sx={{
             display: "flex",

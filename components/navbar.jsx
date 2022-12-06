@@ -15,6 +15,7 @@ import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import Image from "next/image";
 import Logo from "../asset/Logo.png";
+import useMediaQuery from "@mui/material/useMediaQuery";
 const drawerWidth = 240;
 const navItems = [
   { title: "About Us", link: "/aboutus" },
@@ -23,6 +24,8 @@ const navItems = [
 ];
 
 function Navbar(props) {
+  const isXs = useMediaQuery("(max-width:600px)");
+
   const { window } = props;
   const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -75,17 +78,18 @@ function Navbar(props) {
           <Button
             href={"/"}
             sx={{
+              paddingBottom: { xs: "0px" },
               color: "#000000",
-              marginRight: "40px",
-              marginLeft: "40px",
-              display: { xs: "none", sm: "block" },
+              marginRight: { xs: "20", sm: "40px" },
+              marginLeft: { xs: "20", sm: "40px" },
+              display: "block",
             }}
           >
             <Image
               src={Logo}
               alt="WC"
-              width="67px"
-              height="40px"
+              width={isXs ? "58px" : "67px"}
+              height={isXs ? "35px" : "40px"}
               quality={100}
             />
           </Button>

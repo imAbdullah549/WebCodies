@@ -49,7 +49,7 @@ function ImprovingLevel() {
             width: { xs: "90%", sm: "55%" },
             position: { xs: "absolute", sm: "relative" },
             zIndex: { xs: -1, sm: 0 },
-            opacity: { xs: 0.5, sm: 1 },
+            opacity: { xs: 0.2, sm: 1 },
           }}
         >
           <Box sx={{ marginTop: { xs: "60px", sm: "0px" } }}>
@@ -104,17 +104,23 @@ function ImprovingLevel() {
               height: "55%",
               flexDirection: "column",
               justifyContent: "space-around",
+              rowGap: { xs: "10px", sm: "0px" },
             }}
           >
             <Box>
-              <Box sx={{ display: "flex", justifyContent: "space-between" }}>
+              <Box
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                }}
+              >
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -123,10 +129,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -140,10 +146,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -152,10 +158,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -169,7 +175,7 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
                     fontWeight: "bold",
@@ -181,10 +187,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -198,10 +204,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >
@@ -210,10 +216,10 @@ function ImprovingLevel() {
                 <Typography
                   gutterBottom
                   sx={{
-                    fontSize: "23px",
+                    fontSize: { xs: "20", sm: "23px" },
                     color: "rgb(51, 51, 50)",
                     lineHeight: 1.2,
-                    fontWeight: "bold",
+                    fontWeight: { xs: "600", sm: "bold" },
                     fontFamily: "Poppins",
                   }}
                 >

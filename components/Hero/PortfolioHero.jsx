@@ -11,17 +11,24 @@ function PortfolioHero() {
     <Box
       sx={{
         width: "100%",
-        height: "540px",
+        height: { xs: "auto", sm: "600px" },
         paddingTop: "20px",
         paddingBottom: "20px",
         position: "relative",
       }}
     >
-      <Container sx={{ display: "flex", alignItems: "center" }}>
-        <div
-          style={{
+      <Container
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          flexDirection: { xs: "column", sm: "row" },
+        }}
+      >
+        <Box
+          sx={{
             position: "absolute",
             zIndex: -1,
+            padding: { xs: "0px 12px 0px 12px", sm: "100px 0px 0px 0px" },
           }}
         >
           <Image
@@ -31,10 +38,10 @@ function PortfolioHero() {
             height="500px"
             quality={100}
           />
-        </div>
+        </Box>
         <Box
           sx={{
-            width: "50%",
+            width: { xs: "100%", sm: "50%" },
             height: "100%",
             zIndex: 9,
             display: "flex",
@@ -44,11 +51,11 @@ function PortfolioHero() {
         >
           <Typography
             sx={{
-              fontSize: "52px",
+              fontSize: { xs: "38px", sm: "56px" },
               color: "primary.dark",
               lineHeight: "1.2",
               textAlign: "center",
-              marginTop: "8px",
+              marginTop: { xs: "0px", sm: "8px" },
               fontWeight: 700,
               letterSpacing: "1px",
               maxWidth: "445px",
@@ -78,6 +85,7 @@ function PortfolioHero() {
             flexDirection: "column",
             alignItems: " center",
             objectFit: "cover",
+            display: { xs: "none", sm: "block" },
           }}
         >
           <Image
