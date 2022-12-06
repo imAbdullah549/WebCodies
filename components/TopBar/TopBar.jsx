@@ -10,10 +10,15 @@ function TopBar() {
         sx={{
           display: "flex",
           alignItems: "center",
-          justifyContent: "space-between",
+          justifyContent: { xs: "center", sm: "space-between" },
         }}
       >
-        <Box display={"flex"} paddingTop={"3px"} paddingBottom={"3px"}>
+        <Box
+          display={"flex"}
+          paddingTop={"3px"}
+          paddingBottom={"3px"}
+          sx={{ display: { xs: "none", sm: "flex" } }}
+        >
           <LocationOnOutlinedIcon
             sx={{
               fontSize: "20px",
@@ -30,26 +35,32 @@ function TopBar() {
             Rancho Cucamonga, CA 91730, USA
           </Typography>
         </Box>
-        <Box display={"flex"}>
+        <Box
+          display={"flex"}
+          sx={{
+            paddingTop: { xs: "2px", sm: "3px" },
+            paddingBottom: { xs: "2px", sm: "3px" },
+          }}
+        >
           <LocalPhoneOutlinedIcon
             sx={{
-              fontSize: "20px",
+              fontSize: { xs: "16px", sm: "20px" },
               color: "white",
-              marginRight: "5px",
+              marginRight: { xs: "5px", sm: "5px" },
             }}
           />
           <Typography
             color="rgb(255, 255, 255)"
             sx={{
-              marginRight: "15px",
-              fontSize: "15px",
+              marginRight: { xs: "7px", sm: "15px" },
+              fontSize: { xs: "12px", sm: "15px" },
             }}
           >
             1-323-419-1919
           </Typography>
           <Box
             sx={{
-              marginRight: "15px",
+              marginRight: { xs: "6px", sm: "15px" },
               hight: "95%",
               width: "1px",
               backgroundColor: "rgb(129, 148, 218)",
@@ -57,16 +68,16 @@ function TopBar() {
           ></Box>
           <AccessTimeOutlinedIcon
             sx={{
-              fontSize: "20px",
+              fontSize: { xs: "16px", sm: "20px" },
               color: "white",
-              marginRight: "5px",
+              marginRight: { xs: "5px", sm: "5px" },
             }}
           />
           <Typography
             color="rgb(255, 255, 255)"
             sx={{
-              marginRight: "15px",
-              fontSize: "15px",
+              marginRight: { xs: "5px", sm: "15px" },
+              fontSize: { xs: "12px", sm: "15px" },
             }}
           >
             Mon - Sat: 8:00 am to 7:00 pm

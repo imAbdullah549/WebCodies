@@ -79,7 +79,7 @@ const WorkTogather = () => {
             />
           </div>
           <Box
-            sx={{ marginTop: "20px" }}
+            sx={{ marginTop: "20px", rowGap: { xs: "10px", sm: "0px" } }}
             display={"flex"}
             flexDirection={{ xs: "column", md: "row" }}
             justifyContent={"space-between"}
@@ -105,7 +105,7 @@ const WorkTogather = () => {
                   <Typography
                     sx={{
                       fontSize: "12px",
-                      textAlign: "center",
+                      textAlign: { xs: "start", sm: "center" },
                       lineHeight: 1.16,
                       color: "rgb(85, 85, 85)",
                       fontFamily: "Poppins",

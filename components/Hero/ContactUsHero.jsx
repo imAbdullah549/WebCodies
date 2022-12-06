@@ -11,7 +11,7 @@ function ContactUsHero() {
     <Box
       sx={{
         width: "100%",
-        height: { xs: "auto", sm: "540px" },
+        height: { xs: "auto", sm: "600px" },
         paddingTop: "20px",
         paddingBottom: "20px",
         position: "relative",
@@ -24,10 +24,11 @@ function ContactUsHero() {
           flexDirection: { xs: "column", sm: "row" },
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             position: "absolute",
             zIndex: -1,
+            padding: { xs: "0px 12px 0px 12px", sm: "100px 0px 40px 0px" },
           }}
         >
           <Image
@@ -37,7 +38,7 @@ function ContactUsHero() {
             height="500px"
             quality={100}
           />
-        </div>
+        </Box>
         <Box
           sx={{
             width: { xs: "100%", sm: "50%" },

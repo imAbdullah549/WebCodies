@@ -7,7 +7,10 @@ import webDevelopment from "../../asset/webDevelopment.png";
 import DoneIcon from "@mui/icons-material/Done";
 import Heading from "../Heading";
 import SubHeading from "../SubHeading";
+import useMediaQuery from "@mui/material/useMediaQuery";
+
 function OurExpertise() {
+  const isXs = useMediaQuery("(max-width:600px)");
   const SecBullitPara = () => {
     return (
       <Grid
@@ -165,14 +168,18 @@ function OurExpertise() {
           justifyContent="space-between"
         >
           <RightContent />
-          <Grid item xs={0} sm={3}>
-            <Image
-              src={mobile}
-              alt="Mobile"
-              width="515px"
-              height="907px"
-              quality={100}
-            />
+          <Grid item xs={24} sm={3}>
+            <Box
+              sx={{ width: "100%", display: "flex", justifyContent: "center" }}
+            >
+              <Image
+                src={mobile}
+                alt="Mobile"
+                width={isXs ? "200px" : "515px"}
+                height={isXs ? "350px" : "907px"}
+                quality={100}
+              />
+            </Box>
           </Grid>
         </Grid>
       </Container>

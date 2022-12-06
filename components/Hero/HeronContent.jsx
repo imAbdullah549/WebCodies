@@ -28,6 +28,7 @@ function HeronContent() {
           sx={{
             position: "absolute",
             zIndex: -1,
+            padding: { xs: "0px 12px 0px 12px", sm: "0" },
           }}
         >
           <Image

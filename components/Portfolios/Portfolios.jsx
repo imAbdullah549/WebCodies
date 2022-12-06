@@ -12,7 +12,7 @@ const Portfolios = () => {
         gutterBottom
         sx={{
           color: "rgb(50, 80, 191)",
-          fontSize: "35px",
+          fontSize: { xs: "30px", sm: " 35px" },
           fontWeight: "bold",
           lineHeight: 0.96,
           maxWidth: "450px",

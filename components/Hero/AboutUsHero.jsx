@@ -24,10 +24,11 @@ function AboutUsHero() {
           flexDirection: { xs: "column", sm: "row" },
         }}
       >
-        <div
-          style={{
+        <Box
+          sx={{
             position: "absolute",
             zIndex: -1,
+            padding: { xs: "0px 12px 0px 12px", sm: "0" },
           }}
         >
           <Image
@@ -37,7 +38,7 @@ function AboutUsHero() {
             height="500px"
             quality={100}
           />
-        </div>
+        </Box>
         <Box
           sx={{
             width: { xs: "100%", sm: "50%" },

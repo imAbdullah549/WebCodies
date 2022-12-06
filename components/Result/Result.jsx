@@ -119,6 +119,7 @@ const Result = () => {
         component={Card}
         boxShadow={4}
         marginBottom={4}
+        sx={{ display: { xs: "none", sm: "block" } }}
       >
         <form noValidate autoComplete="off">
           <Box display="flex" alignItems={"center"}>
