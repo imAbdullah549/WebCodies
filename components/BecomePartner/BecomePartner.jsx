@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Container, Button, Typography } from "@mui/material";
 import TagYear from "../../asset/aboutus/TagYears.jpg";
 import Image from "next/image";
 import BecomePartnerSlider from "../BecomePartnerSlider";
 import CustomButton from "../CustomButton";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { TypeAnimation } from "react-type-animation";
 function BecomePartner() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Container
       sx={{
@@ -31,6 +37,7 @@ function BecomePartner() {
               lineHeight: "0.961",
               fontWeight: { xs: 600, sm: 700 },
             }}
+            data-aos="fade-down"
           >
             Become a Partner of
           </Typography>
@@ -42,6 +49,7 @@ function BecomePartner() {
               lineHeight: "0.961",
               fontWeight: { xs: 600, sm: 700 },
             }}
+            data-aos="fade-down"
           >
             Our Company
           </Typography>
@@ -56,10 +64,16 @@ function BecomePartner() {
               display: { xs: "none", sm: "block" },
               maxWidth: "445px",
             }}
-          >
-            “A wonderful serenity has taken possession of my entire soul, like
-            these sweet mornings ofings of spring which I enjocharm”
-          </Typography>
+            component={TypeAnimation}
+            sequence={[
+              "A wonderful serenity has taken possession of my entire soul, like these sweet mornings ofings of spring which I enjocharm",
+              1000,
+              "",
+            ]}
+            speed={40}
+            wrapper="h2"
+            repeat={Infinity}
+          ></Typography>
           <Typography
             gutterBottom
             sx={{
@@ -70,10 +84,16 @@ function BecomePartner() {
               lineHeight: 1.409,
               display: { xs: "block", sm: "none" },
             }}
-          >
-            “A wonderful serenity has taken possession of my entire soul, like
-            these sweet mornings ofings of spring which I enjocharm”
-          </Typography>
+            component={TypeAnimation}
+            sequence={[
+              "A wonderful serenity has taken possession of my entire soul, like these sweet mornings ofings of spring which I enjocharm",
+              1000,
+              "",
+            ]}
+            speed={40}
+            wrapper="h2"
+            repeat={Infinity}
+          ></Typography>
           <Typography
             sx={{
               fontSize: "19px",
@@ -82,6 +102,7 @@ function BecomePartner() {
               fontWeight: "bold",
               marginTop: "5px",
             }}
+            data-aos="fade-up"
           >
             Daniel Khan
           </Typography>
@@ -91,10 +112,14 @@ function BecomePartner() {
               fontFamily: "Open Sans",
               color: "rgba(0, 0, 0, 0.6)",
             }}
+            data-aos="fade-up"
           >
             CEO, owner
           </Typography>
-          <Box sx={{ alignSelf: "end", marginTop: { xs: "10px", sm: "0px" } }}>
+          <Box
+            sx={{ alignSelf: "end", marginTop: { xs: "10px", sm: "0px" } }}
+            data-aos="zoom-out"
+          >
             <Image
               src={TagYear}
               alt="WC"
@@ -104,7 +129,10 @@ function BecomePartner() {
             />
           </Box>
         </Box>
-        <Box sx={{ width: "430px", display: { xs: "none", sm: "block" } }}>
+        <Box
+          sx={{ width: "430px", display: { xs: "none", sm: "block" } }}
+          data-aos="fade-left"
+        >
           <BecomePartnerSlider />
         </Box>
       </Box>
@@ -128,6 +156,7 @@ function BecomePartner() {
             alignItems: "center",
             padding: { xs: "5px", sm: "0px" },
           }}
+          data-aos="fade-right"
         >
           <Box
             sx={{ display: "flex", flexDirection: { xs: "column", sm: "row" } }}
@@ -165,6 +194,7 @@ function BecomePartner() {
             alignItems: "center",
             padding: { xs: "5px", sm: "0px" },
           }}
+          data-aos="fade-up"
         >
           <Typography
             sx={{
@@ -194,6 +224,7 @@ function BecomePartner() {
             alignItems: "center",
             display: { xs: "none", sm: "flex" },
           }}
+          data-aos="fade-left"
         >
           <Button variant="contained" color="secondary">
             <Typography

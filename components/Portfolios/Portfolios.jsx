@@ -3,7 +3,7 @@ import Box from "@mui/material/Box";
 import { useTheme } from "@mui/material/styles";
 import { Container, Typography } from "@mui/material";
 import Result from "../Result";
-
+import { TypeAnimation } from "react-type-animation";
 const Portfolios = () => {
   const theme = useTheme();
   return (
@@ -17,9 +17,19 @@ const Portfolios = () => {
           lineHeight: 0.96,
           maxWidth: "450px",
         }}
-      >
-        It’s proudly for us to build interior design
-      </Typography>
+        component={TypeAnimation}
+        sequence={[
+          "It’s proudly for us to build interior design",
+          1000,
+          "It’s proudly for us to build web app",
+          1000,
+          "It’s proudly for us to build mobile app",
+          1000,
+        ]}
+        speed={40}
+        wrapper="h2"
+        repeat={Infinity}
+      ></Typography>
       <Typography
         gutterBottom
         sx={{

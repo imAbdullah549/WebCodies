@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Image from "next/image";
@@ -15,10 +15,16 @@ import ListItem from "@mui/material/ListItem";
 import Avatar from "@mui/material/Avatar";
 import PhoneIcon from "@mui/icons-material/Phone";
 import Heading from "../Heading";
+import AOS from "aos";
+import "aos/dist/aos.css";
 const WorkTogather = () => {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const theme = useTheme();
   const mock = [
     {
+      animation: "zoom-in-right",
       label: "Phone",
       value: "+39 659-657-0133",
       discription:
@@ -36,6 +42,7 @@ const WorkTogather = () => {
       ),
     },
     {
+      animation: "zoom-in-left",
       label: "Email",
       value: "hi@maccarianagency.com",
       discription:
@@ -93,6 +100,7 @@ const WorkTogather = () => {
                   display: "flex",
                   flexDirection: "row",
                 }}
+                data-aos={item.animation}
               >
                 <Box
                   marginRight={2}

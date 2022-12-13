@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -9,18 +9,23 @@ import Image from "next/image";
 import ViewService1 from "../../asset/ViewService1.jpg";
 import ViewService2 from "../../asset/ViewService2.jpg";
 import ViewService3 from "../../asset/ViewService3.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function ViewService() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
-        paddingTop: "15px",
-        marginTop: { xs: "20px", sm: "0px" },
+        // paddingTop: "15px",
+        marginTop: { xs: "20px", sm: "-100px" },
       }}
     >
       <Grid container justifyContent="center" spacing={{ xs: 2, sm: 0 }}>
         <Grid item xs={9} sm={2.5}>
-          <Card>
+          <Card data-aos="flip-left">
             <CardMedia>
               <Image
                 src={ViewService1}
@@ -51,7 +56,7 @@ function ViewService() {
           </Card>
         </Grid>
         <Grid item xs={9} sm={2.5}>
-          <Card>
+          <Card data-aos="flip-up">
             <CardMedia>
               <Image
                 src={ViewService2}
@@ -83,7 +88,7 @@ function ViewService() {
           </Card>
         </Grid>
         <Grid item xs={9} sm={2.5}>
-          <Card>
+          <Card data-aos="flip-right">
             <CardMedia>
               <Image
                 src={ViewService3}

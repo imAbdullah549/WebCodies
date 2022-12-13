@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import WCbackground from "../../asset/heroBackground.jpg";
 import contactUsHero from "../../asset/aboutus/contactUsHero.png";
@@ -6,7 +6,12 @@ import Box from "@mui/material/Box";
 import CustomButton from "../CustomButton";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
+import AOS from "aos";
+import "aos/dist/aos.css";
 function ContactUsHero() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
@@ -15,6 +20,7 @@ function ContactUsHero() {
         paddingTop: "20px",
         paddingBottom: "20px",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       <Container
@@ -60,6 +66,7 @@ function ContactUsHero() {
               letterSpacing: "1px",
               maxWidth: "420px",
             }}
+            data-aos="fade-right"
           >
             Doing business with us is easy.
           </Typography>
@@ -71,6 +78,7 @@ function ContactUsHero() {
               fontFamily: "Poppins",
               color: "rgb(116, 116, 116)",
             }}
+            data-aos="fade-up"
           >
             Home / Contact
           </Typography>
@@ -87,6 +95,7 @@ function ContactUsHero() {
             objectFit: "cover",
             display: { xs: "none", sm: "block" },
           }}
+          data-aos="fade-left"
         >
           <Image
             src={contactUsHero}
