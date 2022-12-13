@@ -3,9 +3,28 @@ import { Box, Container, Button, Typography } from "@mui/material";
 import LocationOnOutlinedIcon from "@mui/icons-material/LocationOnOutlined";
 import LocalPhoneOutlinedIcon from "@mui/icons-material/LocalPhoneOutlined";
 import AccessTimeOutlinedIcon from "@mui/icons-material/AccessTimeOutlined";
+import { motion } from "framer-motion";
 function TopBar() {
   return (
-    <Box sx={{ backgroundColor: "primary.dark", width: "100%" }}>
+    // <motion.div
+    //     initial={{ y: 25, opacity: 0 }}
+    //     animate={{ y: 0, opacity: 1 }}
+    //     transition={{
+    //       delay: 0.2,
+    //       duration: 0.75,
+    //     }}
+    //     className="header-content"
+    //   ></motion.div>
+    <Box
+      sx={{ backgroundColor: "primary.dark", width: "100%" }}
+      component={motion.div}
+      initial={{ y: -25, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{
+        delay: 0,
+        duration: 0.75,
+      }}
+    >
       <Container
         sx={{
           display: "flex",

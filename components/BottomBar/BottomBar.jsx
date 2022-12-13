@@ -1,11 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Box, Container, Button, Typography } from "@mui/material";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GoogleIcon from "@mui/icons-material/Google";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 function BottomBar() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{

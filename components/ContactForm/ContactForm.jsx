@@ -54,8 +54,8 @@ const ContactForm = () => {
     });
 
     return (
-      <Box sx={{ marginTop: { xs: "20px", sm: "0px" } }}>
-        <Box marginBottom={4}>
+      <Box sx={{ marginTop: { xs: "20px", sm: "0px" }, overflow: "hidden" }}>
+        <Box marginBottom={4} data-aos="fade-right">
           <Typography
             variant={"h3"}
             sx={{ fontWeight: 700, fontSize: { xs: "30px", sm: "35px" } }}
@@ -72,7 +72,7 @@ const ContactForm = () => {
             coworking space to an office that takes up an entire floor.
           </Typography>
         </Box>
-        <Box>
+        <Box data-aos="fade-left">
           <form noValidate onSubmit={formik.handleSubmit}>
             <Grid container spacing={4}>
               <Grid item xs={12} sm={6}>

@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Box, Container, Button, Typography } from "@mui/material";
 import ImprovingLevelImg from "../../asset/aboutus/improvingLevel.jpg";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import { styled } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import CountUp from "react-countup";
+import VisibilitySensor from "react-visibility-sensor";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import LinearProgress, {
   linearProgressClasses,
 } from "@mui/material/LinearProgress";
@@ -21,9 +25,19 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
   },
 }));
 function ImprovingLevel() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const theme = useTheme();
   const isXs = useMediaQuery("(max-width:600px)");
+  const [viewPortEntered, setViewPortEntered] = useState(false);
+  const setViewPortVisibility = (isVisible) => {
+    if (viewPortEntered) {
+      return;
+    }
 
+    setViewPortEntered(isVisible);
+  };
   return (
     <Container
       sx={{
@@ -31,6 +45,7 @@ function ImprovingLevel() {
         alignItems: "center",
         flexDirection: "column",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       <Box
@@ -52,7 +67,10 @@ function ImprovingLevel() {
             opacity: { xs: 0.2, sm: 1 },
           }}
         >
-          <Box sx={{ marginTop: { xs: "60px", sm: "0px" } }}>
+          <Box
+            sx={{ marginTop: { xs: "60px", sm: "0px" } }}
+            data-aos="fade-right"
+          >
             <Image
               src={ImprovingLevelImg}
               alt="WC"
@@ -79,6 +97,7 @@ function ImprovingLevel() {
               fontFamily: "Poppins",
               maxWidth: "445px",
             }}
+            data-aos="fade-down"
           >
             We’re constantly improving any level
           </Typography>
@@ -91,6 +110,7 @@ function ImprovingLevel() {
               fontFamily: "Open Sans",
               background: { xs: "rgb(255 255 255 / 50%)", sm: "none" },
             }}
+            data-aos="fade-left"
           >
             {`Mauris porta risus metus, vitae sollicitudin augue eleifend at.
             Nullam nec ex nec velit cursus varius. Mauris a dolor massa. Nam
@@ -107,7 +127,7 @@ function ImprovingLevel() {
               rowGap: { xs: "10px", sm: "0px" },
             }}
           >
-            <Box>
+            <Box data-aos="fade-up" data-aos-duration="2000">
               <Box
                 sx={{
                   display: "flex",
@@ -126,22 +146,30 @@ function ImprovingLevel() {
                 >
                   Creativity
                 </Typography>
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: { xs: "20", sm: "23px" },
-                    color: "rgb(51, 51, 50)",
-                    lineHeight: 1.2,
-                    fontWeight: { xs: "600", sm: "bold" },
-                    fontFamily: "Poppins",
-                  }}
+                <VisibilitySensor
+                  onChange={(isVisible) => setViewPortVisibility(isVisible)}
+                  delayedCall
                 >
-                  86%
-                </Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: "20", sm: "23px" },
+                      color: "rgb(51, 51, 50)",
+                      lineHeight: 1.2,
+                      fontWeight: { xs: "600", sm: "bold" },
+                      fontFamily: "Poppins",
+                    }}
+                    component={CountUp}
+                    duration={4}
+                    end={viewPortEntered ? 86 : 0}
+                    start={0}
+                    suffix={"%"}
+                  ></Typography>
+                </VisibilitySensor>
               </Box>
               <BorderLinearProgress variant="determinate" value={86} />
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-duration="2000">
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Typography
                   gutterBottom
@@ -155,22 +183,30 @@ function ImprovingLevel() {
                 >
                   Team Work
                 </Typography>
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: { xs: "20", sm: "23px" },
-                    color: "rgb(51, 51, 50)",
-                    lineHeight: 1.2,
-                    fontWeight: { xs: "600", sm: "bold" },
-                    fontFamily: "Poppins",
-                  }}
+                <VisibilitySensor
+                  onChange={(isVisible) => setViewPortVisibility(isVisible)}
+                  delayedCall
                 >
-                  98%
-                </Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: "20", sm: "23px" },
+                      color: "rgb(51, 51, 50)",
+                      lineHeight: 1.2,
+                      fontWeight: { xs: "600", sm: "bold" },
+                      fontFamily: "Poppins",
+                    }}
+                    component={CountUp}
+                    duration={4}
+                    end={viewPortEntered ? 98 : 0}
+                    start={0}
+                    suffix={"%"}
+                  ></Typography>
+                </VisibilitySensor>
               </Box>
               <BorderLinearProgress variant="determinate" value={98} />
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-duration="2200">
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Typography
                   gutterBottom
@@ -184,22 +220,30 @@ function ImprovingLevel() {
                 >
                   Disiging
                 </Typography>
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: { xs: "20", sm: "23px" },
-                    color: "rgb(51, 51, 50)",
-                    lineHeight: 1.2,
-                    fontWeight: { xs: "600", sm: "bold" },
-                    fontFamily: "Poppins",
-                  }}
+                <VisibilitySensor
+                  onChange={(isVisible) => setViewPortVisibility(isVisible)}
+                  delayedCall
                 >
-                  92%
-                </Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: "20", sm: "23px" },
+                      color: "rgb(51, 51, 50)",
+                      lineHeight: 1.2,
+                      fontWeight: { xs: "600", sm: "bold" },
+                      fontFamily: "Poppins",
+                    }}
+                    component={CountUp}
+                    duration={4}
+                    end={viewPortEntered ? 92 : 0}
+                    start={0}
+                    suffix={"%"}
+                  ></Typography>
+                </VisibilitySensor>
               </Box>
               <BorderLinearProgress variant="determinate" value={92} />
             </Box>
-            <Box>
+            <Box data-aos="fade-up" data-aos-duration="2400">
               <Box sx={{ display: "flex", justifyContent: "space-between" }}>
                 <Typography
                   gutterBottom
@@ -213,18 +257,26 @@ function ImprovingLevel() {
                 >
                   Development
                 </Typography>
-                <Typography
-                  gutterBottom
-                  sx={{
-                    fontSize: { xs: "20", sm: "23px" },
-                    color: "rgb(51, 51, 50)",
-                    lineHeight: 1.2,
-                    fontWeight: { xs: "600", sm: "bold" },
-                    fontFamily: "Poppins",
-                  }}
+                <VisibilitySensor
+                  onChange={(isVisible) => setViewPortVisibility(isVisible)}
+                  delayedCall
                 >
-                  94%
-                </Typography>
+                  <Typography
+                    gutterBottom
+                    sx={{
+                      fontSize: { xs: "20", sm: "23px" },
+                      color: "rgb(51, 51, 50)",
+                      lineHeight: 1.2,
+                      fontWeight: { xs: "600", sm: "bold" },
+                      fontFamily: "Poppins",
+                    }}
+                    component={CountUp}
+                    duration={4}
+                    end={viewPortEntered ? 94 : 0}
+                    start={0}
+                    suffix={"%"}
+                  ></Typography>
+                </VisibilitySensor>
               </Box>
               <BorderLinearProgress variant="determinate" value={94} />
             </Box>

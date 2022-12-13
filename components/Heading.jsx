@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Typography, Box } from "@mui/material";
-
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Heading({ subtitle, title }) {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
         marginTop: { xs: "35px", sm: "50px" },
         marginBottom: { xs: "35px", sm: "50px" },
       }}
+      data-aos="zoom-in"
     >
       <Typography
         sx={{

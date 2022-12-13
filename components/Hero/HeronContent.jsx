@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Image from "next/image";
 import WCbackground from "../../asset/heroBackground.jpg";
 import HeroRightImg from "../../asset/HeroRight.png";
@@ -6,7 +6,13 @@ import Box from "@mui/material/Box";
 import CustomButton from "../CustomButton";
 import { Typography } from "@mui/material";
 import { Container } from "@mui/material";
+
+import AOS from "aos";
+import "aos/dist/aos.css";
 function HeronContent() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   return (
     <Box
       sx={{
@@ -15,6 +21,7 @@ function HeronContent() {
         paddingTop: "20px",
         paddingBottom: "20px",
         position: "relative",
+        overflow: "hidden",
       }}
     >
       <Container
@@ -55,6 +62,7 @@ function HeronContent() {
               textAlign: "center",
               marginTop: { xs: "10px", sm: "20px" },
             }}
+            data-aos="fade-right"
           >
             Welcome to Webcodies
           </Typography>
@@ -69,6 +77,7 @@ function HeronContent() {
               letterSpacing: "1px",
               maxWidth: "525px",
             }}
+            data-aos="fade-up"
           >
             Grow your Business with us.
           </Typography>
@@ -78,6 +87,7 @@ function HeronContent() {
               textAlign: "center",
               marginTop: "12px",
             }}
+            data-aos="fade-left"
           >
             We provides always our best services for you
           </Typography>
@@ -102,6 +112,7 @@ function HeronContent() {
             objectFit: "cover",
             display: { xs: "none", sm: "block" },
           }}
+          data-aos="fade-left"
         >
           <Image
             src={HeroRightImg}

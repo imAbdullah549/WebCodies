@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Typography, Box } from "@mui/material";
 import Image from "next/image";
 import AboutUsImg from "../../asset/AboutUsImg.jpg";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 function AboutUS() {
+  useEffect(() => {
+    AOS.init({ duration: 2000 });
+  }, []);
   const isXs = useMediaQuery("(max-width:600px)");
 
   return (
@@ -12,8 +18,9 @@ function AboutUS() {
       <Box
         sx={{
           width: "100%",
-          height: "100%",
+          height: "150%",
           position: "relative",
+          overflow: "hidden",
         }}
       >
         <Box
@@ -38,6 +45,7 @@ function AboutUS() {
             paddingTop: { xs: "25px", sm: "70px" },
             flexDirection: { xs: "column", sm: "row" },
             padding: { xs: "25px 25px 0px 25px", sm: "70px 0px 0px 0px" },
+            height: "380px",
           }}
         >
           <Box
@@ -50,7 +58,7 @@ function AboutUS() {
               alignItems: { xs: "start", sm: "center" },
             }}
           >
-            <Box>
+            <Box data-aos="fade-right">
               <Typography
                 color="secondary"
                 sx={{
@@ -122,6 +130,7 @@ function AboutUS() {
               alignItems: " center",
               paddingTop: { xs: "30px", sm: "0px" },
             }}
+            data-aos="fade-left"
           >
             <Typography
               sx={{
